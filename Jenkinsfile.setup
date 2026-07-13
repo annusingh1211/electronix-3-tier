@@ -35,26 +35,25 @@ pipeline {
 
                 sudo apt-get update -y
                 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-                fi 
+                fi
 
                 docker --version
-                echo "Docker Installed Done✅"
+                echo "Docker Installed Done ✅"
                 '''
             }
         }
 
         stage("Provision MySQL client"){
             steps{
-                sh'''
+                sh '''
                 if ! command -v mysql &> /dev/null;then
                 sudo apt-get install -y mysql-client
                 fi
                 mysql --version
 
-                echo "Mysql Done✅"
+                echo "Mysql Done ✅"
                 '''
             }
-
         }
 
     } 
