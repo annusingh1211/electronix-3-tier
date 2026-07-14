@@ -6,9 +6,9 @@ load_dotenv('/home/jenkins/.env')
 
 def create_database():
     connection=pymysql.connect(
-        host=os.getenv("DB_HOST")
-        user=os.getenv("DB_USER")
-        password=os.getenv("DB_PASSWORD")
+        host=os.getenv("DB_HOST"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
         port=int(os.getenv("DB_PORT",3306))
     )
 
